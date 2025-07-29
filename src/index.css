@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design system for real estate valuation platform - professional, trustworthy, modern */
+
+@layer base {
+  :root {
+    --background: 0 0% 99%;
+    --foreground: 215 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 20% 15%;
+
+    /* Deep navy blue for trust and professionalism */
+    --primary: 215 85% 25%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 215 85% 20%;
+
+    /* Light blue-gray for secondary elements */
+    --secondary: 215 25% 95%;
+    --secondary-foreground: 215 25% 25%;
+
+    /* Subtle grays for backgrounds */
+    --muted: 215 15% 96%;
+    --muted-foreground: 215 15% 45%;
+
+    /* Green accent for success/trust indicators */
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 98%;
+    --accent-hover: 142 76% 30%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 15% 90%;
+    --input: 215 15% 92%;
+    --ring: 215 85% 25%;
+
+    /* Trust-building gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(215 85% 25%), hsl(215 85% 35%));
+    --gradient-trust: linear-gradient(90deg, hsl(142 76% 36%), hsl(142 76% 42%));
+    --gradient-subtle: linear-gradient(180deg, hsl(215 25% 98%), hsl(215 15% 96%));
+
+    /* Professional shadows */
+    --shadow-card: 0 4px 20px -2px hsl(215 25% 15% / 0.08);
+    --shadow-form: 0 8px 30px -5px hsl(215 85% 25% / 0.15);
+    --shadow-trust: 0 0 30px hsl(142 76% 36% / 0.2);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 25% 8%;
+    --foreground: 215 15% 92%;
+
+    --card: 215 25% 10%;
+    --card-foreground: 215 15% 92%;
+
+    --popover: 215 25% 10%;
+    --popover-foreground: 215 15% 92%;
+
+    --primary: 215 85% 65%;
+    --primary-foreground: 215 25% 8%;
+    --primary-hover: 215 85% 70%;
+
+    --secondary: 215 25% 15%;
+    --secondary-foreground: 215 15% 85%;
+
+    --muted: 215 25% 12%;
+    --muted-foreground: 215 15% 60%;
+
+    --accent: 142 76% 50%;
+    --accent-foreground: 215 25% 8%;
+    --accent-hover: 142 76% 55%;
+
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 215 25% 8%;
+
+    --border: 215 25% 18%;
+    --input: 215 25% 15%;
+    --ring: 215 85% 65%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(215 85% 65%), hsl(215 85% 75%));
+    --gradient-trust: linear-gradient(90deg, hsl(142 76% 50%), hsl(142 76% 60%));
+    --gradient-subtle: linear-gradient(180deg, hsl(215 25% 10%), hsl(215 25% 12%));
+
+    --shadow-card: 0 4px 20px -2px hsl(215 25% 5% / 0.3);
+    --shadow-form: 0 8px 30px -5px hsl(215 25% 5% / 0.5);
+    --shadow-trust: 0 0 30px hsl(142 76% 50% / 0.3);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
