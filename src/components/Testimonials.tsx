@@ -34,7 +34,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-subtle">
+    <section className="py-20 bg-gradient-subtle" id="testimonios">
       <div className=" mx-auto px-4" style={{maxWidth:"1400px", margin:"0px auto"}}>
         {/* Section header */}
         <div className="text-center mb-16">

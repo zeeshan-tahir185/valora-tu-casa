@@ -32,7 +32,7 @@ const Hero = () => {
 
   return (
     <div>
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/90 to-primary-dark overflow-hidden mt-10">
+      <section id="inicio" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/90 to-primary-dark overflow-hidden mt-10">
         {/* Background image slideshow */}
         <div className="absolute inset-0">
           {images.map((image, index) => (

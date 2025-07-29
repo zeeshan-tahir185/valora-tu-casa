@@ -36,7 +36,7 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="py-10 bg-gradient-subtle">
+    <section className="py-10 bg-gradient-subtle" id="beneficios">
       <div className=" mx-auto px-4" style={{maxWidth:"1400px", margin:"0px auto"}}>
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
