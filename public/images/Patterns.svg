@@ -1,0 +1,74 @@
+<svg width="1280" height="401" viewBox="0 0 1280 401" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.3">
+<g clip-path="url(#clip0_10_633)">
+<path d="M-80 42.873H1360" stroke="#28A899"/>
+<path d="M-80 162.873H1360" stroke="#28A899"/>
+<path d="M-80 282.873H1360" stroke="#28A899"/>
+<path d="M640 -77.127L640 522.873" stroke="#28A899"/>
+<path d="M760 -77.127L760 522.873" stroke="#28A899"/>
+<path d="M880 -77.127L880 522.873" stroke="#28A899"/>
+<path d="M1000 -77.127L1000 522.873" stroke="#28A899"/>
+<path d="M1120 -77.127L1120 522.873" stroke="#28A899"/>
+<path d="M1240 -77.127L1240 522.873" stroke="#28A899"/>
+<path d="M520 -77.127L520 522.873" stroke="#28A899"/>
+<path d="M400 -77.127L400 522.873" stroke="#28A899"/>
+<path d="M280 -77.127L280 522.873" stroke="#28A899"/>
+<path d="M160 -77.127L160 522.873" stroke="#28A899"/>
+<path d="M40 -77.127L40 522.873" stroke="#28A899"/>
+<rect x="35" y="37.873" width="10" height="10" fill="#28A899"/>
+<rect x="35" y="157.873" width="10" height="10" fill="#28A899"/>
+<rect x="35" y="277.873" width="10" height="10" fill="#28A899"/>
+<rect x="35" y="397.873" width="10" height="10" fill="#28A899"/>
+<rect x="155" y="37.873" width="10" height="10" fill="#28A899"/>
+<rect x="155" y="157.873" width="10" height="10" fill="#28A899"/>
+<rect x="155" y="277.873" width="10" height="10" fill="#28A899"/>
+<rect x="155" y="397.873" width="10" height="10" fill="#28A899"/>
+<rect x="280" y="28.731" width="20" height="20" transform="rotate(45 280 28.731)" fill="#28A899" stroke="#28A899"/>
+<rect x="275" y="157.873" width="10" height="10" fill="#28A899"/>
+<rect x="280.141" y="268.873" width="20" height="20" transform="rotate(45 280.141 268.873)" fill="#28A899" stroke="#28A899"/>
+<rect x="275" y="397.873" width="10" height="10" fill="#28A899"/>
+<rect x="395" y="37.873" width="10" height="10" fill="#28A899"/>
+<rect x="395" y="157.873" width="10" height="10" fill="#28A899"/>
+<rect x="395" y="277.873" width="10" height="10" fill="#28A899"/>
+<rect x="395" y="397.873" width="10" height="10" fill="#28A899"/>
+<rect x="515" y="37.873" width="10" height="10" fill="#28A899"/>
+<rect x="515" y="157.873" width="10" height="10" fill="#28A899"/>
+<rect x="515" y="277.873" width="10" height="10" fill="#28A899"/>
+<rect x="515" y="397.873" width="10" height="10" fill="#28A899"/>
+<rect x="635" y="37.873" width="10" height="10" fill="#28A899"/>
+<rect x="635" y="157.873" width="10" height="10" fill="#28A899"/>
+<rect x="635" y="277.873" width="10" height="10" fill="#28A899"/>
+<rect x="635" y="397.873" width="10" height="10" fill="#28A899"/>
+<rect x="755" y="37.873" width="10" height="10" fill="#28A899"/>
+<rect x="755" y="157.873" width="10" height="10" fill="#28A899"/>
+<rect x="755" y="277.873" width="10" height="10" fill="#28A899"/>
+<rect x="755" y="397.873" width="10" height="10" fill="#28A899"/>
+<rect x="875" y="37.873" width="10" height="10" fill="#28A899"/>
+<rect x="875" y="157.873" width="10" height="10" fill="#28A899"/>
+<rect x="875" y="277.873" width="10" height="10" fill="#28A899"/>
+<rect x="875" y="397.873" width="10" height="10" fill="#28A899"/>
+<rect x="1000.14" y="28.873" width="20" height="20" transform="rotate(45 1000.14 28.873)" fill="#28A899" stroke="#28A899"/>
+<rect x="995" y="157.873" width="10" height="10" fill="#28A899"/>
+<rect x="1000.14" y="270.873" width="20" height="20" transform="rotate(45 1000.14 270.873)" fill="#28A899" stroke="#28A899"/>
+<rect x="995" y="397.873" width="10" height="10" fill="#28A899"/>
+<rect x="1115" y="37.873" width="10" height="10" fill="#28A899"/>
+<rect x="1115" y="157.873" width="10" height="10" fill="#28A899"/>
+<rect x="1115" y="277.873" width="10" height="10" fill="#28A899"/>
+<rect x="1115" y="397.873" width="10" height="10" fill="#28A899"/>
+<rect x="1235" y="37.873" width="10" height="10" fill="#28A899"/>
+<rect x="1235" y="157.873" width="10" height="10" fill="#28A899"/>
+<rect x="1235" y="277.873" width="10" height="10" fill="#28A899"/>
+<rect x="1235" y="397.873" width="10" height="10" fill="#28A899"/>
+</g>
+<rect x="-80" y="240.873" width="1440" height="319" fill="url(#paint0_linear_10_633)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_10_633" x1="640" y1="240.873" x2="640" y2="559.873" gradientUnits="userSpaceOnUse">
+<stop stop-color="#ECF7F6" stop-opacity="0"/>
+<stop offset="1" stop-color="#ECF7F6"/>
+</linearGradient>
+<clipPath id="clip0_10_633">
+<rect width="1440" height="610" fill="white" transform="translate(-80 -82.127)"/>
+</clipPath>
+</defs>
+</svg>

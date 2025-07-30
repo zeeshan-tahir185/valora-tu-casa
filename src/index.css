@@ -127,3 +127,65 @@
     @apply bg-background text-foreground;
   }
 }
+
+.custom_pattern_bg{
+  background: url('../public/images/Patterns.svg'), linear-gradient(to top right, #05418f, rgba(8, 132, 214, 0.9));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+
+@keyframes marquee-left-to-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right-to-left {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes marquee-mobile {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee-left-to-right {
+  animation: marquee-left-to-right 100s linear infinite;
+  display: flex;
+  width: calc(360px * 12); /* 6 testimonials * 2 (duplicated) */
+  gap: 16px;
+}
+
+.animate-marquee-right-to-left {
+  animation: marquee-right-to-left 100s linear infinite;
+  display: flex;
+  width: calc(360px * 12);
+  gap: 16px;
+}
+
+.animate-marquee-mobile {
+  animation: marquee-mobile 50s linear infinite;
+  display: flex;
+  width: calc(280px * 12); /* duplicate for seamless loop */
+  gap: 8px;
+}
+
+.animate-marquee-left-to-right:hover,
+.animate-marquee-right-to-left:hover,
+.animate-marquee-mobile:hover {
+  animation-play-state: paused;
+}

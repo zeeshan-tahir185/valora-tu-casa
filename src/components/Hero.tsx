@@ -8,6 +8,7 @@ import heroImage1 from "@/assets/hero-couple.jpg";
 import heroImage2 from "@/assets/img1.jpg";
 import heroImage3 from "@/assets/img2.jpg";
 import heroImage4 from "@/assets/img3.jpg";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const [address, setAddress] = useState("");
@@ -16,11 +17,10 @@ const Hero = () => {
 
   const images = [heroImage1, heroImage2, heroImage3, heroImage4];
 
-  // Background image slideshow
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 2000);
+    }, 3000);
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -33,7 +33,6 @@ const Hero = () => {
   return (
     <div>
       <section id="inicio" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/90 to-primary-dark overflow-hidden mt-10">
-        {/* Background image slideshow */}
         <div className="absolute inset-0">
           {images.map((image, index) => (
             <img
@@ -48,25 +47,33 @@ const Hero = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-primary/60 to-primary/80"></div>
         </div>
 
-        {/* Content */}
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Main heading with animation */}
-            <div className="mb-12 animate-fade-in">
-              <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-6 leading-tight tracking-tight">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-4 leading-tight tracking-tight">
                 Descubre el valor real de tu
-                <span className="block text-accent  px-4 py-1 rounded-full mt-2">
+                <span className="block text-accent px-4 py-1 rounded-full mt-2">
                   vivienda en segundos
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
-                {/* <Home className="inline-block h-6 w-6 mr-2 text-accent" /> */}
-                Valoración gratuita, instantánea y sin compromiso.
-                La herramienta más fiable del mercado inmobiliario.
+              <motion.div
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="h-1 w-24 bg-accent mx-auto mt-2 origin-left rounded-full"
+              />
+              <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto mt-6 leading-relaxed">
+                Valoración gratuita, instantánea y sin compromiso. La herramienta más fiable del mercado inmobiliario.
               </p>
-            </div>
+            </motion.div>
 
-            {/* Valuation form with subtle hover effects */}
             <Card className="max-w-2xl mx-auto p-8 shadow-2xl bg-card/95 backdrop-blur-md border border-primary/20 transform transition-all hover:scale-[1.02]">
               <div className="space-y-6">
                 <div className="flex items-center gap-3 justify-center mb-6">
@@ -117,7 +124,6 @@ const Hero = () => {
               </div>
             </Card>
 
-            {/* Trust indicators with hover animations */}
             <div className="mt-12 grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
               <div className="text-center bg-white/95 py-6 rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
                 <div className="text-4xl font-bold text-accent mb-2">+50.000</div>
