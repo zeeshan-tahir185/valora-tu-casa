@@ -10,6 +10,8 @@ const testimonials = [
     review:
       "Increíble lo rápido y preciso que fue. La valoración coincidió exactamente con la tasación oficial que hice después.",
     image: "/images/client2.jpeg",
+    location: "Madrid, Spain",
+    date: "Sep 2024",
   },
   {
     name: "Carlos Martín",
@@ -18,6 +20,8 @@ const testimonials = [
       "Perfecto para tener una idea antes de poner en venta. Me ayudó a fijar un precio competitivo desde el primer día.",
     image: "/images/client1.jpeg",
     highlighted: true,
+    location: "Barcelona, Spain",
+    date: "Jan 2025",
   },
   {
     name: "Ana Rodríguez",
@@ -25,6 +29,8 @@ const testimonials = [
     review:
       "Lo usé para saber cuánto había revalorizado mi piso en estos años. El resultado me sorprendió gratamente.",
     image: "/images/client4.webp",
+    location: "Valencia, Spain",
+    date: "July 2025",
   },
 ];
 
@@ -40,7 +46,16 @@ export default function Testimonials() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            Más de <span className="text-primary">50.000 propietarios</span> confían en nosotros
+            Más de{" "}
+            <motion.span
+              className="text-primary"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
+            >
+              50.000+
+            </motion.span>{" "}
+            propietarios confían en nosotros
           </h2>
           <motion.div
             initial={{ width: 0 }}
@@ -59,12 +74,12 @@ export default function Testimonials() {
       <div className="relative overflow-hidden">
         {/* First Row: Left to Right */}
         <div className="relative flex overflow-hidden mb-6">
-          <div className="absolute inset-0 pointer-events-none shadow-[inset_200px_0_80px_-10px_rgba(255,255,255,0.9),inset_-200px_0_80px_-10px_rgba(255,255,255,0.9)] z-10"></div>
+          <div className="absolute inset-0 pointer-events-none z-10"></div>
           <div className="flex animate-marquee-left-to-right">
             {[...testimonials, ...testimonials, ...testimonials].map((t, i) => (
               <div
                 key={`row1-${i}`}
-                className={`flex-shrink-0 p-6 py-8 rounded-xl shadow-md mx-2 w-[340px] min-w-[340px] bg-card transition-all duration-300 hover:shadow-xl ${t.highlighted ? "bg-primary/10 border border-primary" : ""
+                className={`flex-shrink-0 p-6 py-8 rounded-xl shadow-md mx-2 w-[340px] min-w-[340px] bg-card transition-all duration-300 hover:shadow-xl border ${t.highlighted ? "bg-primary/10 border border-primary" : ""
                   }`}
               >
                 <div className="flex mb-3">
@@ -87,6 +102,7 @@ export default function Testimonials() {
                     <div className="text-left">
                       <p className="font-semibold text-sm text-foreground">{t.name}</p>
                       <p className="text-xs text-muted-foreground">{t.role}</p>
+                      <p className="text-xs text-muted-foreground">{t.location} - {t.date}</p>
                     </div>
                   </div>
                   <div className="flex items-center text-muted-foreground">
@@ -101,12 +117,12 @@ export default function Testimonials() {
 
         {/* Second Row: Right to Left */}
         <div className="relative flex overflow-hidden">
-          <div className="absolute inset-0 pointer-events-none shadow-[inset_200px_0_80px_-10px_rgba(255,255,255,0.9),inset_-200px_0_80px_-10px_rgba(255,255,255,0.9)] z-10"></div>
+          <div className="absolute inset-0 pointer-events-none z-10"></div>
           <div className="flex animate-marquee-right-to-left">
             {[...testimonials, ...testimonials, ...testimonials].map((t, i) => (
               <div
                 key={`row2-${i}`}
-                className={`flex-shrink-0 p-6 py-8 rounded-xl shadow-md mx-2 w-[340px] min-w-[340px] bg-card transition-all duration-300 hover:shadow-xl ${t.highlighted ? "bg-primary/10 border border-primary" : ""
+                className={`flex-shrink-0 p-6 py-8 rounded-xl shadow-md mx-2 w-[340px] min-w-[340px] bg-card transition-all duration-300 hover:shadow-xl border ${t.highlighted ? "bg-primary/10 border border-primary" : ""
                   }`}
               >
                 <div className="flex mb-3">
@@ -129,6 +145,7 @@ export default function Testimonials() {
                     <div className="text-left">
                       <p className="font-semibold text-sm text-foreground">{t.name}</p>
                       <p className="text-xs text-muted-foreground">{t.role}</p>
+                      <p className="text-xs text-muted-foreground">{t.location} - {t.date}</p>
                     </div>
                   </div>
                   <div className="flex items-center text-muted-foreground">

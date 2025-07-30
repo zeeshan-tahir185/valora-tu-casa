@@ -8,12 +8,16 @@ import heroImage1 from "@/assets/hero-couple.jpg";
 import heroImage2 from "@/assets/img1.jpg";
 import heroImage3 from "@/assets/img2.jpg";
 import heroImage4 from "@/assets/img3.jpg";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 const Hero = () => {
   const [address, setAddress] = useState("");
   const [propertyType, setPropertyType] = useState("");
   const [currentImage, setCurrentImage] = useState(0);
+  const [counter1, setCounter1] = useState(0);
+  const [counter2, setCounter2] = useState(0);
+  const [counter3, setCounter3] = useState(0);
+  const controls = useAnimation();
 
   const images = [heroImage1, heroImage2, heroImage3, heroImage4];
 
@@ -23,6 +27,34 @@ const Hero = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, [images.length]);
+
+  useEffect(() => {
+    const animateCounters = async () => {
+      await controls.start({ opacity: 1, transition: { duration: 1 } });
+      const target1 = 50000;
+      const target2 = 98;
+      const target3 = 60;
+      const duration = 2;
+      const frames = duration * 60; // 60 FPS approximation
+
+      const step1 = target1 / frames;
+      const step2 = target2 / frames;
+      const step3 = target3 / frames;
+
+      let frame = 0;
+      const animate = setInterval(() => {
+        frame++;
+        setCounter1((prev) => (frame >= frames ? target1 : prev + step1));
+        setCounter2((prev) => (frame >= frames ? target2 : prev + step2));
+        setCounter3((prev) => (frame >= frames ? 60 : prev + step3));
+
+        if (frame >= frames) {
+          clearInterval(animate);
+        }
+      }, 1000 / 60);
+    };
+    animateCounters();
+  }, [controls]);
 
   const handleValuation = () => {
     if (address && propertyType) {
@@ -58,7 +90,7 @@ const Hero = () => {
             >
               <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-4 leading-tight tracking-tight">
                 Descubre el valor real de tu
-                <span className="block text-accent px-4 py-1 rounded-full mt-2">
+                <span className="block text-accent px-4 pb-4 pt-1 rounded-full mt-2 bg-secondary/50">
                   vivienda en segundos
                 </span>
               </h1>
@@ -70,7 +102,7 @@ const Hero = () => {
                 className="h-1 w-24 bg-accent mx-auto mt-2 origin-left rounded-full"
               />
               <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto mt-6 leading-relaxed">
-                Valoración gratuita, instantánea y sin compromiso. La herramienta más fiable del mercado inmobiliario.
+                Valoración gratuita, instantánea y sin compromiso. Confía en la herramienta líder del mercado inmobiliario.
               </p>
             </motion.div>
 
@@ -125,27 +157,39 @@ const Hero = () => {
             </Card>
 
             <div className="mt-12 grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <div className="text-center bg-white/95 py-6 rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
-                <div className="text-4xl font-bold text-accent mb-2">+50.000</div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={controls}
+                className="text-center bg-white/95 py-6 rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="text-4xl font-bold text-accent mb-2">+{Math.round(counter1).toLocaleString('es-ES')}</div>
                 <div className="text-lg text-gray-800 flex items-center justify-center gap-2">
                   <Calculator className="h-5 w-5" />
                   Valoraciones realizadas
                 </div>
-              </div>
-              <div className="text-center bg-white/95 py-6 rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
-                <div className="text-4xl font-bold text-accent mb-2">98%</div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={controls}
+                className="text-center bg-white/95 py-6 rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="text-4xl font-bold text-accent mb-2">{Math.round(counter2)}%</div>
                 <div className="text-lg text-gray-800 flex items-center justify-center gap-2">
                   <Star className="h-5 w-5" />
                   Clientes satisfechos
                 </div>
-              </div>
-              <div className="text-center bg-white/95 py-6 rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
-                <div className="text-4xl font-bold text-accent mb-2">&lt; 60s</div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={controls}
+                className="text-center bg-white/95 py-6 rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="text-4xl font-bold text-accent mb-2">&lt; {Math.round(counter3)}s</div>
                 <div className="text-lg text-gray-800 flex items-center justify-center gap-2">
                   <Clock className="h-5 w-5" />
                   Tiempo de valoración
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
