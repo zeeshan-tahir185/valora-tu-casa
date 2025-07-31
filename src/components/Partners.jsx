@@ -67,7 +67,7 @@ const LogoCarousel = () => {
         <Slider {...settings}>
           {logos.map((logo, index) => (
             <div key={index} className="px-2">
-              <div className="border border-gray-200 rounded-lg shadow-sm p-4 bg-white flex justify-center items-center h-36">
+              <div className="border-2 !border-[#16A249] rounded-lg shadow-sm p-4 !bg-white flex justify-center items-center h-36">
                 <img
                   src={logo}
                   alt={`Logo ${index + 1}`}

@@ -134,7 +134,27 @@
   background-size: cover;
   background-position: top;
 }
+.hero_bg_gradient {
+  position: relative; /* Ensure the container is positioned */
+  background-color: white; /* Fallback background color */
+  background: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.85)), url('./assets/bg_map.png'); /* Slightly lighter white gradient */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  z-index: 1; /* Ensure content stays above */
+}
 
+/* Pseudo-element for additional white shade */
+.hero_bg_gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.35); /* Slightly lighter white shade overlay */
+  z-index: -1; /* Place behind content */
+}
 
 @keyframes marquee-left-to-right {
   0% {
